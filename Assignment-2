@@ -1,0 +1,18 @@
+<!--
+Write a javaScript program to print the content of the current window
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmnet-2</title>
+    <script type= "text/javascript">    
+    </script>
+</head>
+<body>
+    <h1> Print the window page</h1>
+    <button onclick="window.print()">Print</button>
+    
+</body>
+</html>
