@@ -1,0 +1,43 @@
+Q. Write the difference between var, let and const with code examples.
+
+A:  
+    var : It can be redeclared and updated. They are only available inside the function they’re created in,
+          or if not created inside a function, they are ‘globally scoped’.
+          
+          
+          // Define the variable:
+          var width = 100;
+          // Call the variable:
+          width;
+          // It returns:
+          100
+          // Reassign the variable and call it again:
+          width = 200;
+
+          width;
+          // Returns:
+          200
+    
+    let:  It can be updated but not redeclared. If I declare a let variable at the global scope,
+          then redeclare it within a block (curly brackets), I will not get an error in the console,
+          but it will not actually redeclare let.
+          
+          For eg.:
+          let points = 50;
+          let winner = false;
+          if(points > 40) {
+            let winner = true;
+          }
+          // If I call:
+          winner
+          // It returns the first value: 
+          false
+          
+    const:  const variables cannot be updated.
+            
+            // If I define the const variable:
+            const key = 'xyz123';
+            // Then try to redeclare it:
+            key = 'xyz1234'
+            // I get the following error:
+            Uncaught TypeError: Assignment to constant variable.
