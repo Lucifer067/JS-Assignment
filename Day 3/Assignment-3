@@ -1,0 +1,17 @@
+Q.  Write a brief intro on available data types in javascript.
+
+A.  
+    Data types specify what kind of data can be stored and manipulated within a program.
+    There are eight basic data types in JavaScript.
+    
+    number: for numbers of any kind integer or floating-point, integers are limited by ±253.
+    bigint is for integer numbers of arbitrary length.
+    string: A string may have zero or more characters, there’s no separate single-character type.
+    boolean: for true/false.
+    null: for unknown values – a standalone type that has a single value null.
+    undefined: for unassigned values – a standalone type that has a single value undefined.
+    object: for more complex data structures.
+    symbol: for unique identifiers.
+    
+    Array:  An array is a type of object used for storing multiple values in single variable.
+    Function: The function is callable object that executes a block of code.
