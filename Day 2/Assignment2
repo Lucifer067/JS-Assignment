@@ -1,0 +1,189 @@
+Q. Explain with examples the remaining methods of String and Array.
+
+A:  
+    Some String Methods:
+          
+         1. search(): The search() method searches a string for a specified value and returns the position of the match.
+              Example:
+                var str = "Please locate where 'locate' occurs!";
+                var pos = str.search("locate");
+                
+             
+          2. slice(): extracts a part of a string and returns the extracted part in a new string.
+              Example:
+                   var str = "Apple, Banana, Kiwi";
+                   var res = str.slice(7, 13);
+                   
+                   Output:
+                        Banana
+          3. string.trim():  The trim() method removes whitespace from both sides of a string.
+                  Example:
+                      var str = "       Hello World!        ";
+                      alert(str.trim());
+                      
+                      Output:
+                            Hello World!
+           4. charCodeAt(): returns the unicode of the character at a specified index in a string.
+                Exapmle:
+                      var str = "HELLO WORLD";
+
+                      str.charCodeAt(0);         // returns 72
+                      
+                      
+                      
+    Some Array methods:
+    
+    Array.splice() : Insertion and Removal in between an Array
+      example:
+              var numarr = [ 20, 30, 40, 50, 60 ]; 
+              var strarr = [ "amit", "sumit", "anil", "prateek" ]; 
+
+              // splice() 
+              // deletes 3 elements starting from 1 
+              // number array contains [20, 60] 
+              numarr.splice(1, 3); 
+
+              // deletes two elements starting from index 1 
+              // and add three elements. 
+              // It contains  ["amit", "xyz", "geek 1", "geek 2", "prateek"]; 
+              strarr.splice(1, 2, "xyz", "geek 1", "geek 2"); 
+
+              // Printing both the array after performing splice operation 
+              console.log("After splice op " + numarr); 
+              console.log("After splice op " + strarr); 
+    1. some() Method: This method checks whether at least one of the elements of the array satisfies the condition checked by the argument function.
+
+          Example:
+
+          <script>  
+
+          // JavaScript to illustrate 
+          // lastIndexOf() method 
+          function isGreaterThan5(element, index, array) {  
+              return element > 5;  
+          }  
+
+          function func() {  
+
+              // Original array  
+              var array = [2, 5, 8, 1, 4];  
+
+              // Checking for condition in array  
+              var value = array.some(isGreaterThan5);  
+
+              document.write(value);  
+          }  
+
+          func();  
+          </script> 
+          Output:
+          true
+     2. reduce() Method: The array reduce() method in JavaScript is used to reduce the array to a single value
+                        and executes a provided function for each value of the array (from left-to-right) and
+                        the return value of the function is stored in an accumulator.
+
+          Example:
+          
+          <script> 
+
+          // Original array 
+          var numbers = [88, 50, 25, 10]; 
+
+          // Performing reduce method 
+          var sub = numbers.reduce(geeks); 
+
+          function geeks(total, num) { 
+              return total - num; 
+          } 
+
+          document.write(sub) 
+          </script> 
+          Output:
+          3
+          
+      3. map() Method: The map() method in JavaScript create an array by calling a specific function on each element present in the parent array.
+                       It is a non-mutating method. Generally, the map() method is used to iterate over an array and
+                       calling the function on every element of an array.
+
+
+
+          Example:
+      
+          <script> 
+
+          // Original array 
+          var numbers = [4, 9, 16, 25]; 
+
+          // Performing map method 
+          var sub = numbers.map(geeks); 
+
+          function geeks() { 
+              return numbers.map(Math.sqrt); 
+          } 
+
+          document.write(sub) 
+          </script> 
+          Output:
+          2, 3, 4, 5
+          
+      4. every() Method: This method checks whether all the elements of the array satisfy the given condition or 
+                         not that is provided by a function passed to it as the argument.
+
+          Example:
+          
+          <script>  
+
+          // JavaScript code for every() function  
+          function ispositive(element, index, array) {  
+              return element > 0;  
+          }  
+
+          function func() {  
+
+              var arr = [ 11, 89, 23, 7, 98 ];  
+
+              // Check for positive number  
+              var value = arr.every(ispositive);  
+
+              document.write(value);  
+          }  
+
+          func();  
+          </script>  
+          Output:
+          true
+
+      5. flat() Method: This method creates a new array that contains more than arrays.
+                        Basically creates a simple array from an array that contains multiple arrays.
+
+          Example:
+          
+          <script>  
+
+          //Original array 
+          var arr = [ [11, 89], [23, 7], 98 ];  
+
+          // Performing flat method 
+          var geeks = arr.flat(); 
+
+          document.write(geeks) 
+          </script>  
+          Output:
+          11, 89, 23, 7, 98
+          
+      6. flatMap() Method: This method is used to flatten the input array element into a new array.
+                           This method first of all map every element with the help of mapping function, then flattens the input array element into a new array.
+
+          Example:
+          
+          <script>  
+
+          const myAwesomeArray = [[1], [2], [3], [4], [5]] 
+
+          var geeks = myAwesomeArray.flatMap(arr => arr * 10) 
+          console.log(geeks); 
+
+          </script>                     
+          Output:
+          10, 20, 30, 40, 50
+          
